@@ -19,7 +19,11 @@ function Rating(props) {
   return (
     <div>
       <div>
-        <div className="stars-div">{starsArr}</div>
+        <div className="stars-div">
+          {starsArr.map((elem, i) => (
+            <section key={i}>{elem}</section>
+          ))}
+        </div>
       </div>
     </div>
   );
