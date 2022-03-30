@@ -12,6 +12,9 @@ import noGlasses from './persons/maxence.png';
 import glasses from './persons/maxence-glasses.png';
 import Dice from './components/Dice';
 import Carousel from './components/Carousel';
+import NumbersTable from './components/NumbersTable';
+import Facebook from './components/Facebook';
+import SignupPage from './components/SignupPage';
 import { useState } from 'react';
 function App() {
   let colorArray = ['purple', 'blue', 'green', 'yellow', 'orange', 'red'];
@@ -162,6 +165,18 @@ function App() {
             'https://randomuser.me/api/portraits/men/2.jpg',
           ]}
         />
+      </div>
+      <div>
+        <h1 className="title">Numbers Table</h1>
+        <NumbersTable limit={12} />
+      </div>
+      <div>
+        <h1 className="title">Facebook</h1>
+        <Facebook />
+      </div>
+      <div>
+        <h1 className="title">Signup Page</h1>
+        <SignupPage />
       </div>
     </div>
   );

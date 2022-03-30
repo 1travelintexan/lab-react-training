@@ -104,3 +104,35 @@ h4 {
   justify-content: center;
   align-items: center;
 }
+.boxes {
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 10px 0 0 20px;
+  padding: 0;
+  width: 80%;
+}
+.fbContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+}
+.fbContainer h4 {
+  margin: 0;
+  padding: 0;
+}
+.fbContainer h6 {
+  margin: 0 0 0 10px;
+  padding: 0;
+}
+.signup {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
