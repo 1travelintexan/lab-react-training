@@ -15,7 +15,6 @@ function Rating(props) {
     } else {
       starsArr.push(emptyStarImg);
     }
-    console.log(solidNumber, starsArr);
   }
   return (
     <div>

@@ -5,8 +5,31 @@ import Random from './components/Random';
 import BoxColor from './components/BoxColor';
 import CreditCard from './components/CreditCard';
 import Rating from './components/Rating';
-
+import DriverCard from './components/DriverCard';
+import LikeButton from './components/LikeButton';
+import ClickablePicture from './components/ClickablePicture';
+import noGlasses from './persons/maxence.png';
+import glasses from './persons/maxence-glasses.png';
+import Dice from './components/Dice';
+import Carousel from './components/Carousel';
+import { useState } from 'react';
 function App() {
+  let colorArray = ['purple', 'blue', 'green', 'yellow', 'orange', 'red'];
+
+  const [count, setCount] = useState(1);
+  const [likeColor, setLikeColor] = useState('');
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => {
+    setClick(!click);
+  };
+
+  const handleLike = () => {
+    setCount(count + 1);
+    let randomIndex = Math.floor(Math.random() * colorArray.length);
+    setLikeColor(colorArray[randomIndex]);
+    console.log('here', likeColor);
+  };
   return (
     <div>
       <div>
@@ -86,6 +109,59 @@ function App() {
         <Rating>3</Rating>
         <Rating>4</Rating>
         <Rating>5</Rating>
+      </div>
+      <div>
+        <h1 className="title">Driver Card:</h1>
+        <DriverCard
+          name="Travis Kalanick"
+          rating={4.2}
+          img="https://si.wsj.net/public/resources/images/BN-TY647_37gql_OR_20170621052140.jpg?width=620&height=428"
+          car={{
+            model: 'Toyota Corolla Altis',
+            licensePlate: 'CO42DE',
+          }}
+        />
+        <DriverCard
+          name="Dara Khosrowshahi"
+          rating={4.9}
+          img="https://ubernewsroomapi.10upcdn.com/wp-content/uploads/2017/09/Dara_ELT_Newsroom_1000px.jpg"
+          car={{
+            model: 'Audi A3',
+            licensePlate: 'BE33ER',
+          }}
+        />
+      </div>
+      <div>
+        <h1 className="title">Like Button:</h1>
+        <LikeButton
+          color={likeColor}
+          count={count}
+          countIncrease={handleLike}
+        />
+      </div>
+      <div>
+        <h1 className="title">Clickable Picture:</h1>
+        <ClickablePicture
+          clicked={handleClick}
+          click={click}
+          img={noGlasses}
+          imgClicked={glasses}
+        />
+      </div>
+      <div>
+        <h1 className="title">Dice:</h1>
+        <Dice />
+      </div>
+      <div>
+        <h1 className="title">Carousel</h1>
+        <Carousel
+          images={[
+            'https://randomuser.me/api/portraits/women/1.jpg',
+            'https://randomuser.me/api/portraits/men/1.jpg',
+            'https://randomuser.me/api/portraits/women/2.jpg',
+            'https://randomuser.me/api/portraits/men/2.jpg',
+          ]}
+        />
       </div>
     </div>
   );
