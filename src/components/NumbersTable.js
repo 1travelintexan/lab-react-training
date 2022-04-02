@@ -45,7 +45,7 @@ function NumbersTable({ limit }) {
   return (
     <div className="boxes">
       {boxArray.map((elem, i) => {
-        <h6 key={i}>elem</h6>;
+        return <h6 key={i}>elem</h6>;
       })}
     </div>
   );

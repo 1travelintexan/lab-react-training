@@ -5,7 +5,7 @@ import profiles from '../data/berlin.json';
 function Facebook() {
   //make an array of all countries that are unique. Meaning no duplicates
   let allCountries = [];
-  profiles.map((elem) => {
+  profiles.forEach((elem) => {
     if (allCountries.indexOf(elem.country) === -1) {
       allCountries.push(elem.country);
     }

@@ -136,3 +136,31 @@ h4 {
   align-items: center;
   flex-direction: column;
 }
+
+.colorPickerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.colorBoxContainer {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  border: 2px solid black;
+  margin: 15px;
+}
+
+.finalColor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 30px;
+}

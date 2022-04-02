@@ -15,6 +15,7 @@ import Carousel from './components/Carousel';
 import NumbersTable from './components/NumbersTable';
 import Facebook from './components/Facebook';
 import SignupPage from './components/SignupPage';
+import RGBColorPicker from './components/RGBColorPicker';
 import { useState } from 'react';
 function App() {
   let colorArray = ['purple', 'blue', 'green', 'yellow', 'orange', 'red'];
@@ -177,6 +178,10 @@ function App() {
       <div>
         <h1 className="title">Signup Page</h1>
         <SignupPage />
+      </div>
+      <div>
+        <h1 className="title">RGB Color Picker</h1>
+        <RGBColorPicker />
       </div>
     </div>
   );
